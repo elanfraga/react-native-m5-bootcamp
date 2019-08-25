@@ -78,7 +78,7 @@ export default class Main extends Component {
   handleNavigate = user => {
     const { navigation } = this.props;
 
-    navigation.navigate('User', user);
+    navigation.navigate('User', { user });
   };
 
   render() {
@@ -98,8 +98,8 @@ export default class Main extends Component {
             {loading ? (
               <ActivityIndicator color="#fff" />
             ) : (
-                <Icon name="add" size={20} color="#fff" />
-              )}
+              <Icon name="add" size={20} color="#fff" />
+            )}
           </SubmitButton>
         </Form>
 
@@ -122,5 +122,3 @@ export default class Main extends Component {
     );
   }
 }
-
-
